@@ -83,7 +83,7 @@ int main()
 	//As a result, the statements in the inner loop execute a total of N * N times.Thus, the complexity is O(N * M).
 	// the total complexity for the two loops is O(N2).
 	///</complexitymeasureexplained>
-	///<parallelopportunity>Yes</parallelopportunity>
+	///<parallelopportunity>No - Because there is an update of the array.</parallelopportunity>
 	for (i = 0; i<r1; ++i)
 		for (j = 0; j<c2; ++j)
 			for (k = 0; k<c1; ++k)
