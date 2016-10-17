@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <conio.h>
 
 //declare one of our own functions so the compiler will understand the references below
 int average(int[]);
