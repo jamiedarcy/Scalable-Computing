@@ -1,7 +1,7 @@
 /*
 * Scalable Computing -CA1
 * Jamie Darcy (X00130016) - 01/11/2016
-* to compile this file: g++ -fopenmp smatrix.c -o smatrix
+* to compile this file:  g++ -fopenmp smatrix.c -o smatrix
 * to run this file:  ./smatrix
 */
 #include <cstdlib>
@@ -15,7 +15,8 @@ int main()
 {
 	/* DECLARING VARIABLES */
 	double wtime; // Execution time measure
-	int a[255][255], b[255][255], mult[255][255]; // declaring matrices of NxN size
+	int size = 200;
+	int a[size][size], b[size][size], mult[size][size];   // declaring matrices of NxN size
 	int aRows, aColumns, bRows, bColumns, i, j, k;
 
 	srand(time(NULL)); //seeds the random number generator used by the function rand
