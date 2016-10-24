@@ -17,6 +17,7 @@
  */
 
 #include <stdio.h>
+#include <omp.h>
 
 int no_problem_with_digits (int i)
 {
@@ -27,6 +28,8 @@ int no_problem_with_digits (int i)
 
    prior = -1;
    sum = 0;
+
+   //#pragma omp parallel for
    for (j = 0; j < 6; j++) {
       latest = i % 10;
       if (latest == prior) return 0;
@@ -49,7 +52,9 @@ int main (void)
    int count;   /* Count of acceptable ID numbers */
    int i;
 
+
    count = 0; 
+   #pragma omp parallel for reduction(+:count)
    for (i = 0; i < 1000000; i++)
       if (no_problem_with_digits (i)) {
         count++;

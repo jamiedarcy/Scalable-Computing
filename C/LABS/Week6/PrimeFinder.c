@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <omp.h>
 
 int main (int argc, char *argv[])
 {
@@ -33,6 +34,7 @@ int main (int argc, char *argv[])
       exit (1);
    }
 
+   #pragma omp parallel for 
    for (i = 0; i < N; i++) marked[i] = 1;
    marked[0] = 0;
    marked[1] = 0; // not primes
@@ -46,6 +48,7 @@ int main (int argc, char *argv[])
    } while (prime * prime <= n);
 
    count = 0;
+   #pragma omp parallel for reduction(+:count)
    for (i = 0; i < N; i++)
       count += marked[i];
    printf ("\nThere are %d primes less than or equal to %d\n\n", count, n);
