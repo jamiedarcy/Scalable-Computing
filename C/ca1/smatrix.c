@@ -4,6 +4,7 @@
 * to compile this file: g++ -fopenmp smatrix.c -o smatrix
 * to run this file:  ./smatrix
 */
+#include <cstdlib>
 #include <iostream>
 #include <time.h>
 #include <omp.h>

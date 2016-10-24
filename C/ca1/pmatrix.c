@@ -4,6 +4,7 @@
 * to compile this file: g++ -fopenmp pmatrix.c -o pmatrix
 * to run this file:  ./pmatrix
 */
+#include <cstdlib>
 #include <iostream>
 #include <time.h>
 #include <omp.h>
