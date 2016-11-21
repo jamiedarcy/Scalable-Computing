@@ -1,2 +1,4 @@
 library(parallel)
 clu <-makePSOCKcluster(4)
+
+StopCluster(clu)
