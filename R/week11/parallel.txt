@@ -1,0 +1,2 @@
+library(parallel)
+clu <- makePSOCKCluster(4)
